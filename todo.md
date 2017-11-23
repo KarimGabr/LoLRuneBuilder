@@ -2,7 +2,7 @@
 ## Scenes
 - [x] Create empty scenes
 ## "Champion Select" Scene
-- [ ] Display existing champions
+- [x] Display existing champions
 - [ ] Search/Scroll: existing champions
 - [ ] Add champions
 - [ ] Search/Scroll: add champions
