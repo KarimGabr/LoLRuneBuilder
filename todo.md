@@ -7,4 +7,4 @@
 - [ ] Add champions
 - [ ] Search/Scroll: add champions
 - [ ] Remove champions
-- [ ] Select champions >> Go to "Runes" Scene
+- [x] Select champions >> Go to "Runes" Scene
