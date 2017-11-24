@@ -53,7 +53,7 @@ public class db : MonoBehaviour
  
                 if (isPlayed == 1)
                 {
-                    if (transform.childCount > 0) x += 100f;
+                    if (transform.childCount > 1) x += 100f;
                     Vector3 iconPosition = new Vector3(transform.position.x + x, transform.position.y, transform.position.z);
 
                     GameObject championIcon = Instantiate(Resources.Load("champion-icon"), iconPosition, Quaternion.identity) as GameObject;
