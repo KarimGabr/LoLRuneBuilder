@@ -4,7 +4,6 @@
 ## "Champion Select" Scene
 - [x] Display existing champions
 - [ ] Search/Scroll: existing champions
-- [ ] Add champions
+- [x] Add champions
 - [ ] Search/Scroll: add champions
-- [ ] Remove champions
 - [x] Select champions >> Go to "Runes" Scene
