@@ -43,6 +43,7 @@ public class db : MonoBehaviour
             IDataReader reader = dbcmd.ExecuteReader();
 
             float x = 100f;
+            float y = 0f;
 
             while (reader.Read())
             {
@@ -53,14 +54,22 @@ public class db : MonoBehaviour
  
                 if (isPlayed == 1)
                 {
-                    if (transform.childCount > 1) x += 100f;
-                    Vector3 iconPosition = new Vector3(transform.position.x + x, transform.position.y, transform.position.z);
-
+                    if (transform.childCount > 1) x += 70f;
+                    if (transform.childCount % 8 == 0)
+                    {
+                        y -= 60f;
+                        x = 30f;
+                    }
+                        
+                    Debug.Log("transform name = " + transform.name + " transform xpos =  " + transform.position.x + " transform ypos = " + transform.position.y);
+                    Vector3 iconPosition = new Vector3(transform.position.x + x, transform.position.y - 25f + y, transform.position.z);
+                    Debug.Log("transform name = " + transform.name + " transform xpos =  " + transform.position.x + " transform ypos = " + transform.position.y);
                     GameObject championIcon = Instantiate(Resources.Load("champion-icon"), iconPosition, Quaternion.identity) as GameObject;
                     championIcon.transform.SetParent(transform);
 
                     string spritePath = "Images/Champions Icons/" + name;
                     championIcon.transform.GetComponent<Image>().overrideSprite = Resources.Load<Sprite>(spritePath);
+                    championIcon.transform.localScale = new Vector3(1f,1f,1f);
                 }
 
                 Debug.Log("value = " + id + " " + " champion = " + name + " " + "isPlayed = " + isPlayed);
